@@ -1,0 +1,30 @@
+[package]
+name = "switchyard"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/colelawrence/switchyard-macos"
+description = "A macOS default browser that routes links to the right app by rule"
+
+[dependencies]
+anyhow = "1"
+ely-gpui-component = { git = "https://git.zacharyzhang.com/ZacharyZhang-NY/Ely-GPUI-Components", rev = "81d0f5f5ddf2d603bf03fd111aafb7f07ca97041" }
+gpui = { package = "gpui-pre", version = "=0.3.8", default-features = false, features = ["stacker"] }
+gpui_platform = { package = "gpui-pre-platform", version = "=0.3.8", features = ["font-kit", "runtime_shaders"] }
+log = "0.4"
+env_logger = "0.11"
+regex = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.9"
+percent-encoding = "2"
+url = "2"
+futures = "0.3"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+cocoa = "0.26"
+objc = "0.2"
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = [] }

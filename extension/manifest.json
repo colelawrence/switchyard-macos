@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Switchyard",
+  "version": "0.1.0",
+  "description": "Sends links that match your Switchyard rules to the app they belong in.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq+gPD8g+o4oEVIm6xTJZxtAnRKYDJKgwNTVyUoQp345s5Ftitb8vPmp8mxj8KRDgyKvTvv34fmNZd3/AydVpdEqc/JnPfhyqG6dxTjThawmaiNqARUd2FLxXPONYBInRmrGNQTaYmMhEmuD5Zh+5sDBUKo1qvq09rJexYD4zYUnYBANPbCB7O9y0s1OO6PCKSONi0uYlvnqQMw6+iQ5SRGBG/EtWU9d+p8QBgXvu/Xwl8Fy/Dhg1bPrT9jpsZqIQchUftjP4hIRrFDvwZ4/PCFWGLHraP9urxenmJMLhKcSQGpJs5y7ZEbnUJs0d0uZUI7Ci1qe8EBa5dNwUDjt99QIDAQAB",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "nativeMessaging",
+    "storage",
+    "webNavigation",
+    "contextMenus",
+    "tabs",
+    "alarms"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "match.js",
+        "content.js"
+      ],
+      "all_frames": true,
+      "match_about_blank": true,
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Switchyard",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}

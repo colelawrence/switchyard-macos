@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <style>body { width: 320px; padding: 14px; } section + section { border-top: 1px solid var(--line); margin-top: 10px; padding-top: 10px; }</style>
+</head>
+<body>
+  <section>
+    <h1><img src="icons/icon-32.png" alt="" width="16" height="16" style="vertical-align:-3px;margin-right:6px"><span id="dot" class="dot"></span><span id="status">Connecting…</span></h1>
+    <p id="detail" class="muted"></p>
+  </section>
+  <section id="page" hidden>
+    <p id="verdict"></p>
+    <div class="row"><button id="send" class="primary">Send this page to Switchyard</button></div>
+  </section>
+  <section id="actions">
+    <div class="row"><button id="reconnect">Reconnect</button></div>
+  </section>
+  <script src="match.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
