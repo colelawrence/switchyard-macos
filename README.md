@@ -1,10 +1,12 @@
+<img src="bundle/icon-1024.png" width="96" alt="">
+
 # Switchyard
 
 A default web browser for macOS that doesn't show web pages. It routes every link you click to the right place:
 Slack links open in Slack, meeting links open in Zoom, work links open in your work browser, and everything
 else goes to your usual browser.
 
-![Switchyard icon](bundle/icon-1024.png)
+![The Switchyard settings window, editing a rule that opens Slack thread links in the Slack app](docs/screenshot.png)
 
 ## Install
 
